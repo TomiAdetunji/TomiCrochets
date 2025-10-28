@@ -1,6 +1,6 @@
 
 
-function Message() {
+function Landing() {
     return (
         <>
         <div 
@@ -15,12 +15,13 @@ function Message() {
             }}
         >
             <h1 className="display-3 text-center p-3 rounded">
-                Welcome to TomiCrochets!
+                Welcome to
             </h1> 
+            <img src="/logo.jpg" alt="Tomi Crochets!" width="300" height="160"></img>
         </div>
 
         </>
     )
 }
 
-export default Message;
+export default Landing;

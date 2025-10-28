@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom"
+
 function NavBar() {
     return (
         <>
@@ -7,19 +9,25 @@ function NavBar() {
                  style={{ backgroundColor: "#dad8eb"}}
                 >
                     <div className="col-md-3 mb-2 mb-md-0">
-                        <a className="navbar-Brand" href="#">
+                        <NavLink className="navbar-Brand" to="/">
                             <img src="/logo.jpg" alt="logo" width="150" height="80"></img>
-                        </a>
+                        </NavLink>
                     </div>
                         <ul className="nav nav-pills col-12 col-md-auto mb-2 justify-content-center mb-md-0">
                             <li className="nav-item">
-                                <a className="nav-link text-dark active" aria-current="page" href="#">Home</a>
+                                <NavLink to="/" className={({ isActive }) => 
+                                    "nav-link" + (isActive ? " active text-dark fw-bold" : " text-dark")
+                                }>Home</NavLink>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link text-dark" href="#">Gallery/Items</a>
+                                <NavLink to="/gallery" className={({ isActive }) => 
+                                    "nav-link" + (isActive ? " active text-dark fw-bold" : " text-dark")
+                                }>Gallery/Items</NavLink>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link text-dark" href="#">Contact Me!</a>
+                                <NavLink to="/contact" className={({ isActive }) => 
+                                    "nav-link" + (isActive ? " active text-dark fw-bold" : " text-dark")
+                                }>Contact Me!</NavLink>
                             </li>
                         </ul>
                     

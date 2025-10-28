@@ -1,9 +1,11 @@
-import  Message from './Message'
+import  Landing from './Landing'
+import About from './AboutMe'
 
 function HomePage() {
     return (
         <>
-            <Message />
+            <Landing />
+            <About/>
         </>
     )
 }
